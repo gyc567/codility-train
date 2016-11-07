@@ -27,6 +27,19 @@ class BinaryCapTest extends spock.lang.Specification {
         1 | 5
         2 | 9
     }
+    def "Solution 2 int #a,int #n"() {
+
+        expect:
+        a == BinaryCap.getLongestZeroNumber(n)
+        where:
+
+        a | n
+        5 | 1041
+        0 | 15
+        4 | 529
+        1 | 5
+        2 | 9
+    }
 
 
 }

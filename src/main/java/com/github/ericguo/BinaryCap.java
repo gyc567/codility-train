@@ -25,6 +25,9 @@ Complexity:
 
 
  */
+
+import java.util.stream.Stream;
+
 /**
  * Created by eric567 [email:gyc567@126.com]
  * on 11/1/2016.
@@ -91,6 +94,14 @@ public class BinaryCap {
 
 
 
+    public static int getLongestZeroNumber(int N) {
+        return Stream.of(
+                Integer.toBinaryString(N).replaceAll("0+$", "").split("1+")
+        ).filter(a -> a != null)
+                .map(String::length)
+                .max(Integer::compare)
+                .orElse(0);
 
+    }
 
 }
