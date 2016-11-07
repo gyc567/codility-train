@@ -95,8 +95,15 @@ public class BinaryCap {
 
 
     public static int getLongestZeroNumber(int N) {
+
+
+        String s = Integer.toBinaryString(N);
+        System.out.println("------->"+s);
+        System.out.println("after replace---->"+s.replaceAll("0+$", ""));
+        String[] split = s.split("1+");
+        System.out.println("after split-->"+ split);
         return Stream.of(
-                Integer.toBinaryString(N).replaceAll("0+$", "").split("1+")
+                s.replaceAll("0+$", "").split("1+")
         ).filter(a -> a != null)
                 .map(String::length)
                 .max(Integer::compare)
