@@ -3,6 +3,7 @@ package com.github.ericguo;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 /**
  * Created by eric567 [email:gyc567@126.com]
@@ -51,6 +52,7 @@ public class UnpairedElement {
      * @param A
      * @return
      */
+    private static Logger logger = Logger.getLogger(String.valueOf(UnpairedElement.class));
 
     public static int solution(int[] A) {
         int res = 0;
@@ -63,11 +65,9 @@ public class UnpairedElement {
 
     public static final int solutionWithLambda(int[] A) {
         //Java 8 Streams & Lambdas solution by the Architect https://disqus.com/by/op8rv315/
-        Integer[] newArray = new Integer[A.length];
-        int i = 0;
-        for (int value : A) {
-            newArray[i++] = Integer.valueOf(value);
-        }
+
+        // To boxed array
+        Integer[] newArray = Arrays.stream( A ).boxed().toArray( Integer[]::new );
         List<Integer> numberList = Arrays.asList(newArray);
 
         Optional odd = numberList.stream()
