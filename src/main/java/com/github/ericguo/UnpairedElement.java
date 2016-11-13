@@ -58,7 +58,9 @@ public class UnpairedElement {
         int res = 0;
         if (A.length == 0) return res;
         for (int i : A) {
+            System.out.println("before"+res+"-"+i);
             res = res ^ i; // Implementation of XOR
+            System.out.println("after"+res);
         }
         return res;
     }

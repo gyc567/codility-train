@@ -70,6 +70,26 @@ public class Fibonacci {
             return value;
         }
     }
+
+   public static long  fib(int n)
+    {
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        int i;
+        long  SecondLast, ThirdLast, Last=0;
+
+        SecondLast = ThirdLast = 1;
+
+        for (i = 1; i <= n - 2; ++i) {
+            Last = SecondLast + ThirdLast;
+            ThirdLast = SecondLast;
+            SecondLast = Last;
+        }
+
+        return Last;
+    }
     public static BigInteger fibonacci(int n) {
 
 
@@ -100,5 +120,36 @@ public class Fibonacci {
         return b;
 
 
+    }
+
+
+    /**
+     * However, the fastest way to compute the nth Fibonacci number
+     * is not this. There is an O(log N) approach which based on
+     * the mathematical approximation formula –
+
+     f_n \approx \frac{1}{\sqrt{5}} \left ( \frac{1 + \sqrt{5}}{2} \right )^{n + 1}
+
+     The value computed by f_n is such that it very close to the nth Fibonacci number, so it can be rounded off to the nearest integer to get the nth Fibonacci number. The value \frac{1 + \sqrt{5}}{2} is called phi, or “φ”, or the Golden Ratio. Now, the question is how to calculate \phi^{n + 1} in O(log N) time. We do this,
+     by using Binary Exponentiation Technique, which works by Dynamic Programming…!
+     * @param x
+     * @param n
+     * @return
+     */
+    double BinaryExponentiation(double x, int n)
+    {
+        if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return x;
+        } else {
+            double temp = BinaryExponentiation(x, n / 2);
+
+            if (n % 2 == 0) {
+                return temp * temp;
+            } else {
+                return x * temp * temp;
+            }
+        }
     }
 }
