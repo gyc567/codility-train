@@ -9,7 +9,8 @@ package com.github.ericguo;
  * <p>
  * class Solution { public int solution(int[] A); }
  * <p>
- * that, given a non-empty zero-indexed array A of N integers, returns the minimal positive integer (greater than 0) that does not occur in A.
+ * that, given a non-empty zero-indexed array A of N integers,
+ * returns the minimal positive integer (greater than 0) that does not occur in A.
  * <p>
  * For example, given:
  * A[0] = 1
@@ -39,22 +40,21 @@ public class MissingInteger {
         if (length < 1 || length > 100000) {
             return -1;
         }
-        int duplicated = 0;
-        int temp=0;
-        int sum=0;
-        for (int i = 0; i <length; i++) {
-            duplicated=duplicated^A[i];
-            if(duplicated==1)
-            {
-                temp=A[i];
-            }
-            sum+=A[i];
+
+        boolean[] seen=new boolean[length];
+        for (int i = 0; i < A.length; i++) {
+            if(A[i]<-2147483648||A[i]>2147483647)return -1;
+            seen[A[i]-1]=true;
         }
 
-        // (1+A.length)*(A.length)/2
-        int expectSum= (1+length)*(length)/2;
+        for (int i = 0; i < seen.length; i++) {
+            if (seen[i]==false)
+            {
+                return i+1;
+            }
+        }
 
 
-        return expectSum+temp-sum;
+        return length+1;
     }
 }
