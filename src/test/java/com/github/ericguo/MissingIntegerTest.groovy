@@ -8,14 +8,31 @@ import spock.lang.Specification
  */
 class MissingIntegerTest extends Specification {
 
-        def "given the array of integer #A,shall return #missing"() {
-            expect:
-            MissingInteger.solution(A) == missing
-            where:
-            A                        | missing
-            [1, 3, 6, 4,1,2] as int[]    | 5
-            [1, 3, 6, 4,2,2] as int[]    | 5
+    def "given the array of integer #A,shall return #missing"() {
+        expect:
+        MissingInteger.solution(A) == missing
+        where:
+        A                            | missing
+        [1, 3, 6, 4, 1, 2] as int[]  | 5
+        [1, 3, 6, 4, -1, 2] as int[] | 5
+        [0] as int[]                 | 1
+        [1] as int[]                 | 2
+        [-1] as int[]                | 1
 
 
-        }
+    }
+
+    def "test getMissingIntger given the array of integer #A,shall return #missing"() {
+        expect:
+        MissingInteger.getMissingIntger(A) == missing
+        where:
+        A                            | missing
+        [1, 3, 6, 4, 1, 2] as int[]  | 5
+        [1, 3, 6, 4, -1, 2] as int[] | 5
+        [0] as int[]                 | 1
+        [1] as int[]                 | 2
+        [-1] as int[]                | 1
+
+
+    }
 }
