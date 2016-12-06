@@ -6,7 +6,7 @@ import spock.lang.Specification
  * Created by eric567 [email:gyc567@126.com] 
  * on 12/6/2016.
  */
-class MaxCountersTest extends Specification {
+class CountDivTest extends Specification {
     void setup() {
 
     }
@@ -18,11 +18,10 @@ class MaxCountersTest extends Specification {
     def "Solution"() {
 
         expect:
-        MaxCounters.solution(x, A) == rt
+        CountDiv.solution(A, B, K) == rt
         where:
-        x | A                              | rt
-        5 | [3, 4, 4, 6, 1, 4, 4] as int[] | [3, 2, 2, 4, 2]
-        1 | [1] as int[]                   | [1]
+        A | B  | K | rt
+        6 | 11 | 2 | 3
 
     }
 }
