@@ -45,5 +45,6 @@ public class HelloB extends HelloA {
         new HelloB();
         new HelloB();
         System.out.println("-------main end-------");
+
     }
 }

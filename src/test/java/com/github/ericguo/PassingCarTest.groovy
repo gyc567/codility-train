@@ -10,7 +10,7 @@ class PassingCarTest extends Specification {
     def "Solution"() {
 
         expect:
-        PassingCar.solution(A) == rt
+        PassingCar.solution2(A) == rt
         where:
         A                        | rt
         [0, 1, 0, 1, 1] as int[] | 5
