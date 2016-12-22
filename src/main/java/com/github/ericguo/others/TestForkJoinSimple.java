@@ -1,4 +1,4 @@
-package com.github.ericguo;
+package com.github.ericguo.others;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -88,7 +88,8 @@ public class TestForkJoinSimple {
     @Test
     public void testSort() throws Exception {
         ForkJoinTask sort = new SortTask(array);
-        ForkJoinPool fjpool = new ForkJoinPool();
+        int cpuCores = Runtime.getRuntime().availableProcessors();
+        ForkJoinPool fjpool = new ForkJoinPool(cpuCores);
         fjpool.submit(sort);
         fjpool.shutdown();
 

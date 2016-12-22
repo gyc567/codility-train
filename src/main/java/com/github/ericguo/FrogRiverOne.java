@@ -26,7 +26,7 @@ import java.util.TreeSet;
 
  Write a function:
 
- class Solution { public int solution(int X, int[] A); }
+ class AddTwoNumbers { public int solution(int X, int[] A); }
 
  that, given a non-empty zero-indexed array A consisting of N integers and integer X, returns the earliest time when the frog can jump to the other side of the river.
 

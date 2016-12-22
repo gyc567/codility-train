@@ -33,7 +33,7 @@ package com.github.ericguo;
  * <p>
  * Write a function:
  * <p>
- * class Solution { public int[] solution(int N, int[] A); }
+ * class AddTwoNumbers { public int[] solution(int N, int[] A); }
  * <p>
  * that, given an integer N and a non-empty zero-indexed array A consisting of M integers, returns a sequence of integers representing the values of the counters.
  * <p>

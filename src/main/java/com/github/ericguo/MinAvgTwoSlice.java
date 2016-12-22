@@ -24,7 +24,7 @@ package com.github.ericguo;
 
  Write a function:
 
- class Solution { public int solution(int[] A); }
+ class AddTwoNumbers { public int solution(int[] A); }
 
  that, given a non-empty zero-indexed array A consisting of N integers,
  returns the starting position of the slice with the minimal average.

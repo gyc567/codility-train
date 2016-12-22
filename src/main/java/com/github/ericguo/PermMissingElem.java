@@ -9,7 +9,7 @@ package com.github.ericguo;
  * <p>
  * Write a function:
  * <p>
- * class Solution { public int solution(int[] A); }
+ * class AddTwoNumbers { public int solution(int[] A); }
  * <p>
  * that, given a zero-indexed array A, returns the value of the missing element.
  * <p>

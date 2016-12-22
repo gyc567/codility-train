@@ -9,7 +9,7 @@ import java.util.HashSet;
  * <p>
  * Write a function:
  * <p>
- * class Solution { public int solution(int[] A); }
+ * class AddTwoNumbers { public int solution(int[] A); }
  * <p>
  * that, given a non-empty zero-indexed array A of N integers,
  * returns the minimal positive integer (greater than 0) that does not occur in A.

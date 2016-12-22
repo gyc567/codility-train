@@ -1,4 +1,4 @@
-package com.github.ericguo;
+package com.github.ericguo.others;
 
 /**
  * Created by eric567 [email:gyc567@126.com]
