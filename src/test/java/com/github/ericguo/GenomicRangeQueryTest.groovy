@@ -10,10 +10,10 @@ class GenomicRangeQueryTest extends Specification {
     def "Solution"() {
 
         expect:
-        GenomicRangeQuery.solution2(S, P, Q) == rt
-        where:
-        S         | P                  | Q                  | rt
-        "CAGCCTA" | [2, 5, 0] as int[] | [4, 5, 6] as int[] | [2, 4, 1]
+    GenomicRangeQuery.solution2(S, P, Q) == rt
+    where:
+    S         | P                  | Q                  | rt
+    "CAGCCTA" | [2, 5, 0] as int[] | [4, 5, 6] as int[] | [2, 4, 1]
 
-    }
+}
 }

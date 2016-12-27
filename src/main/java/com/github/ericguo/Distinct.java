@@ -1,5 +1,7 @@
 package com.github.ericguo;
 
+import java.util.Arrays;
+
 /**
  * Write a function
  * <p>
@@ -32,12 +34,21 @@ public class Distinct {
     public static int solution(int[] A) {
         //1.sort the array
         int length = A.length;
-        int middle = length / 2;
+        Arrays.sort(A);//quickSort(0, length - 1, A);
+
+        int distinct = 0;
+        int temp = Integer.MAX_VALUE;
+        for (int i = 0; i < A.length; i++) {
+            if (temp != A[i]) {
+                temp = A[i];
+                distinct++;
+            }
+        }
 
 
         //2.count the distinct
 
-        return -1;
+        return distinct;
     }
 
     /*
@@ -96,7 +107,7 @@ public class Distinct {
     }
 
     public static void swap(int a, int b, int[] A) {
-        int temp ;
+        int temp;
         temp = A[a];
         A[a] = A[b];
         A[b] = temp;
