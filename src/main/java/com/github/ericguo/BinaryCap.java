@@ -32,7 +32,7 @@ import java.util.stream.Stream;
  * Created by eric567 [email:gyc567@126.com]
  * on 11/1/2016.
  */
-public class BinaryCap {
+public class  BinaryCap {
     public static int solution(int N) {
         // write your code in Java SE 8
         String s = Integer.toBinaryString(N);
