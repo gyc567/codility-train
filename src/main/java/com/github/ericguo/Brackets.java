@@ -2,13 +2,21 @@ package com.github.ericguo;
 
 import java.util.Stack;
 
+
 /**
  * Created by eric567 [email:gyc567@126.com]
  * on 1/6/2017.
  */
 public class Brackets {
+
+
     public static int solution(String S)
     {
+
+
+
+
+
         if(S.length()==0||null==S||S.equals(""))return 1;
         char[] nested=S.toCharArray();
 
@@ -36,6 +44,8 @@ public class Brackets {
 
         return stack.isEmpty() ? 1 : 0;
     }
+
+
 
 
 }
